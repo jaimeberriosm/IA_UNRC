@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score,confusion_matrix
 from sklearn.neural_network import MLPClassifier
 
 
-input_dir = './clf-data'
+input_dir = '/home/jaime/Documentos/Python/IA_UNRC/IA_UNRC/Introduccion a IA/ejercicios-de-la-tercera-semana/sklearn_mlp/parking_lot/clf-data'
 categories = ['empty', 'non_empty']
 
 data = []
