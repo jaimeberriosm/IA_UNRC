@@ -4,7 +4,9 @@ from sklearn.linear_model import Perceptron
 from sklearn.metrics import precision_score, recall_score, confusion_matrix, classification_report, accuracy_score
     
 data, target = load_iris(return_X_y = True) # target has numeric values 0, 1, 2 for setosa, versicolor and virginica, resp.
-postprocessed_target = target # TODO: Change this line to binary values versicolor vs the rest
+#postprocessed_target = target # TODO: Change this line to binary values versicolor vs the rest
+postprocessed_target = [0 if species == 1 else 1 for species in target] 
+
 
 train_data, test_data, train_target, test_target = train_test_split(data, postprocessed_target) 
 
