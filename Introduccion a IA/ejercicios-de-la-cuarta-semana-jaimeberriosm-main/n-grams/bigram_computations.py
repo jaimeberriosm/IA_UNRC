@@ -2,7 +2,7 @@ import string;
 import sys;
 import tokenize;
 
-f = open("./don-quijote.txt", 'r')
+f = open("Introduccion a IA/ejercicios-de-la-cuarta-semana-jaimeberriosm-main/n-grams/don-quijote.txt", 'r')
 bigram_freq = {}
 word_set_size = 0
 line=f.readline()

@@ -2,7 +2,7 @@ import string;
 import sys;
 import tokenize;
 
-f = open("./don-quijote.txt", 'r')
+f = open("Introduccion a IA/ejercicios-de-la-cuarta-semana-jaimeberriosm-main/n-grams/don-quijote.txt", 'r')
 #TODO initialize frequency dictionary 
 line=f.readline()
 while line:
