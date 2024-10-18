@@ -2,8 +2,9 @@ import string;
 import sys;
 import tokenize;
 
-f = open("Introduccion a IA/ejercicios-de-la-cuarta-semana-jaimeberriosm-main/n-grams/don-quijote.txt", 'r')
+f = open("/home/jaime/Documentos/Python/IA_UNRC/IA_UNRC/Introduccion a IA/ejercicios-de-la-cuarta-semana-jaimeberriosm-main/n-grams/don-quijote.txt", 'r')
 freq = {}
+l=0
 line=f.readline()
 while line:
     line = line.rstrip()
@@ -21,20 +22,46 @@ sentence_2 = "Cabrero lo de a los que Quijote estaban don con contó un que"
 
 #TODO Compute probability of sentence_1 and sentence_2
 probability={}
-#for word in list:
-#    probability[word]=freq[word]/range(len(list))
+l=len(freq)
 
-print(probability)
-print(range(len(list)))
+for word in freq:
+    probability[word]=freq[word]/l
+
 
 sentence_1=sentence_1.rstrip()
 sentence_1= sentence_1.lower()
 sentence_1= sentence_1.split()
-prob=1.0
-#for word in sentence_1:
-#    prob=probability[word]*prob
+prob1=1.0
+for word in sentence_1:
+    prob1=probability[word]*prob1
+    print(f'la probabilidad de {word} es {probability[word]}')
+print(sentence_1)
+print(f'La probabilidad de la secuencia uno es {prob1}')    
 
-print(f'La probabilidad de la secuencia uno es {prob}')    
+
+entence_2=sentence_2.rstrip()
+sentence_2= sentence_2.lower()
+sentence_2= sentence_2.split()
+prob2=1.0
+for word in sentence_2:
+    prob2=probability[word]*prob2
+    print(f'la probabilidad de {word} es {probability[word]}')
+print(sentence_2)
+print(f'La probabilidad de la secuencia dos es {prob2}')    
+
+if prob1>prob2:
+    print('La primera secuencia es mas probable')
+else:
+    print('La segunda secuencia es mas probable')
 
 #TODO What is the most likely way of continuing "De lo que contó un"
+
+max=0
+for word in freq:
+    if freq[word] > max:
+         max=freq[word]
+         max_word=word
+
+
+print(f' La palabra "{max_word}" tiene mayor probabilidad de completar la oracion')
 
