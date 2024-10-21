@@ -24,3 +24,22 @@ sentence = "De lo que contó un cabrero a los que estaban con don"
 #TODO Compute the most likely word to continue the sentence, based on bigrams
 
 
+
+max1=0
+max=0
+for word in bigram_freq:
+    if bigram_freq[word] > max:
+         max=bigram_freq[word]
+         max_word=word
+print(f'la palabra{max_word} es la mas repetida con {bigram_freq[max_word]} veces')
+
+for pair in bigram_freq:
+    if pair[0]=='don':
+        print(pair)
+        if bigram_freq[pair]>max1:
+            max1=bigram_freq[pair]
+            max_pair=pair
+   
+print(f'el par de palabras{max_pair} es el mas probable con {bigram_freq[max_pair]} repeticiones')
+
+
