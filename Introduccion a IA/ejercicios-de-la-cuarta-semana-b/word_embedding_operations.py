@@ -17,13 +17,16 @@ print(word_vectors.doesnt_match("argentinian uruguayan peruvian icecream".split(
 
 # What would be the female (woman) equivalent of 'king'?
 #TODO put your code here
-
+female=word_vectors.most_similar(positive=['king','woman'],negative=['man'])[0][0]
+print(f'lo similar de king en femenino es {female}')
 # What would be the female (woman) equivalent of 'nba'?
 #TODO put your code here
-
+nba=word_vectors.most_similar(positive=['nba','woman'],negative=['man'])[0][0]
+print(f'lo similar de nba en femenino es {nba}')
 # (nhl - football) + basketball is...
 #TODO put your code here
-
+foot=word_vectors.most_similar(positive=['nhl','basketball'],negative=['football'])[0][0]
+print(f'lo similar de nhl en basket es {foot}')
 
 
 
