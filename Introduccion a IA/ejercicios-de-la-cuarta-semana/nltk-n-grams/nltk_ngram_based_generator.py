@@ -4,7 +4,7 @@ from nltk.lm.preprocessing import padded_everygram_pipeline
 import nltk
 
 
-text = open('Introduccion a IA/ejercicios-de-la-cuarta-semana-jaimeberriosm-main/nltk-n-grams/poe.txt', encoding = 'utf8').read()
+text = open('Introduccion a IA/ejercicios-de-la-cuarta-semana/nltk-n-grams/poe.txt', encoding = 'utf8').read()
 tokenized_text = [list(map(str.lower, word_tokenize(sent))) 
                   for sent in sent_tokenize(text)]
 
