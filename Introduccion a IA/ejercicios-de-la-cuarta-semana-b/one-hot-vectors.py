@@ -1,6 +1,6 @@
 import numpy as np
  
-with open('./rue-morgue.txt', encoding = 'utf8') as text:
+with open('Introduccion a IA/ejercicios-de-la-cuarta-semana-b/rue-morgue.txt', encoding = 'utf8') as text:
     corpus = text.readlines()
 
 # Create a set of unique words in the corpus
@@ -23,4 +23,8 @@ print(f'The word \'{study}\' is encoded with vector {study_vector}.')
 # Print the one-hot encoded vectors for the following sentence:
 sentence = 'much invigorated by mathematical study, and especially by that highest branch'
 #TODO Put your code here
-
+words = sentence.lower().split()
+for word in words:
+    word_vector=np.zeros(len(unique_words))
+    word_vector[word_to_index[word]] = 1
+    print(f'The word \'{word}\' is encoded with vector {word_vector}.')
